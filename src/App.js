@@ -1,21 +1,24 @@
 import React from 'react';
 import Form from './Components/Form';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-
+import { Switch, Route } from 'react-router-dom';
+import HomePage from './Components/HomePage/HomePage';
+import Navbar from './Components/HomePage/Navbar';
+import Footer from './Components/Footer';
+import CircusList from './Components/HomePage/CircusList';
 import './App.css';
 
 const App = () => {      
   return (
-    <Router>
-      <div className="App" >        
-        <Switch>
-          <Route exact path="Form" component={Form} />       
-        </Switch>
+      <div className="App" > 
         <Navbar />
+        <Switch>      
+          <Route exact path="/" component={HomePage} />
+          <Route  path="form" component={Form} />               
         <Form />
+        <CircusList />
+        </Switch> 
+        <Footer />
       </div>
-    </Router>
   );
 }
 

@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+
+
+
 
 const CardMap = () => {
   return (
+    
     <div>
       
     </div>
   )
 }
 
-export default CardMap
+export default CardMap;

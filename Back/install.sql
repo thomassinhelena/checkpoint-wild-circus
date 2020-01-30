@@ -12,3 +12,6 @@ CREATE TABLE list (
   url_image VARCHAR(100),
   location VARCHAR(100) NOT NULL
 );
+
+INSERT INTO list (name, latitude, longitude, location)
+VALUES ('Cirque de venise', 43.7031, 7.2661, 'Nice')
