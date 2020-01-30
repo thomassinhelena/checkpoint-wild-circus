@@ -26,10 +26,11 @@ router.put('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+	console.log(req.body)
 	connection.query(`INSERT INTO list (name, latitude, longitude, location)
 	VALUES ('${req.body.name}', '${req.body.latitude}', '${req.body.longitude}', '${req.body.location}')`, (err, result) => {
 		if(err) {res.sendStatus(400)};
-		res.sendStatus(200);
+		res.send(result);
 	})
 })
 
