@@ -1,7 +1,8 @@
 import React from 'react';
 import Form from './Components/Form';
-import CardMap from './Components/CardMap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+
 import './App.css';
 
 const App = () => {      
@@ -9,10 +10,9 @@ const App = () => {
     <Router>
       <div className="App" >        
         <Switch>
-          <Route exact path="/" component={CardMap} />
-          <Route path="Form" component={Form} />       
+          <Route exact path="Form" component={Form} />       
         </Switch>
-        <CardMap />
+        <Navbar />
         <Form />
       </div>
     </Router>
