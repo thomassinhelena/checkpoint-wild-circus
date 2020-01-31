@@ -31,7 +31,15 @@ router.post('/', (req, res) => {
 	VALUES ('${req.body.name}', '${req.body.latitude}', '${req.body.longitude}', '${req.body.location}')`, (err, result) => {
 		if(err) {res.sendStatus(400)};
 		res.send(result);
-	})
-})
+	});
+});
+
+router.delete('/:id', (req, res) => {
+  connection.query(`DELETE FROM list 
+  WHERE id=${req.params.id}`, (err, result) => {
+		if(err){res.sendStatus(400)};
+		res.sendStatus(200);
+	});
+});
 
 module.exports = router;

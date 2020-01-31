@@ -3,27 +3,18 @@ import axios from 'axios';
 
 
 const CircusList = () => {
-const [list, setList] = useState({
 
-  latitude: '',
-  longitude: '',
-  name: '',
-  location: '',
-  picture: ''
-});
-
+const[list, setList] = useState([]);
 
 useEffect(() => {
-  axios.get("https://localhost:8000/list")
+    axios.get("http://localhost:8000/list")
     .then((result) => {
-      console.log(list)
-      setList(result.data);
-    });
-}, []);
-
+      setList(result)
+    })
+  })
 return (
    <div>
-     
+     {JSON.stringify(list)}
    </div>
   )
 }

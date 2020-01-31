@@ -9,8 +9,10 @@ const Navbar = () => {
   return (
     
     <div id="Nav">
-      <h2>Wild Circus</h2>
-      <Link to="/Form">Ajouter un cirque</Link>
+      <h2> Les meilleures adresses de cirque en france </h2>
+      <Link to="/"> Accueil </Link>
+      <Link to="/form"> Ajouter un cirque </Link>
+      <Link to="/list">List</Link>
     </div>
   )      
 }

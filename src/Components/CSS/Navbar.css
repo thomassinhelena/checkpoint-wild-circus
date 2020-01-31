@@ -1,4 +1,8 @@
 #Nav {
-    background-color: rgb(241, 11, 22);
-    margin-bottom: 30px;
+  background-color: rgb(4, 155, 97);
+  margin-bottom: 30px;
+}
+
+a {
+  color: black;
 }
