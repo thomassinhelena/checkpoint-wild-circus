@@ -32,6 +32,6 @@ export default function Map({ options, onMount, className, onMountProps }) {
 Map.defaultProps = {
   options: {
     center: { lat: 47.2173, lng: -1.5534 },
-    zoom: 2,
+    zoom: 12,
   }
 }
